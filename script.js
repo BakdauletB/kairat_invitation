@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: form.message.value.trim(),
     };
     // Replace with your Google Apps Script web app URL
-    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzDlcyFlKgJoQKs78va0r6lZtEmpUBV3OdXnR9IyqYsBEdZ94z8i9lT0kot_dJyZiI/exec';
     // Send the data to Google Apps Script endpoint
     fetch(scriptURL, {
       method: 'POST',
