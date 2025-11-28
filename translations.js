@@ -1,9 +1,14 @@
 /*
  * Translation dictionary for the wedding invitation website.
  * Each key corresponds to a translation token used in the HTML via the
- * `data-i18n` attribute. When a language is selected, the appropriate
- * strings are injected into the page. Placeholders for form fields are
+ * `data-i18n` attribute.  When a language is selected, the appropriate
+ * strings are injected into the page.  Placeholders for form fields are
  * handled separately via the `data-i18n-placeholder` attribute.
+ *
+ * Additional keys `countdownDays`, `countdownHours`, `countdownMinutes`
+ * and `countdownSeconds` have been added to support translation of the
+ * countdown timer units.  These map to the human‑readable labels shown
+ * beneath the numeric values in the timer.
  */
 
 const translations = {
@@ -11,12 +16,18 @@ const translations = {
     invitationTitle: "Үйлену тойға шақыру",
     coupleNames: "Жамшидбек <br /> &amp; <br />Кахрабо",
     weddingDate: "24 қаңтар 2026, сағат 19:00",
-    poem: "Артқа тастап балауса бала шақты,<br />Біз де тіктік жас отау, жаңа ошақты.<br />Әке – шеше жолына қадам бастық,<br />Жалғау үшін бүгін мен болашақты.",
+    poem:
+      "Артқа тастап балауса бала шақты,<br />Біз де тіктік жас отау, жаңа ошақты.<br />Әке – шеше жолына қадам бастық,<br />Жалғау үшін бүгін мен болашақты.",
     address:
       "Құрметті ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат, дос-жарандар, көршілер мен әріптестер!",
     invitationMessage:
       'Сіз(дер)ді балаларымыз<br><span class="couple-inline-names great-vibes">Жамшидбек &amp; Кахрабо</span><br>үйлену тойына жайылған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!',
     countdownTitle: "Тойға дейін:",
+    // Unit labels for the countdown timer
+    countdownDays: "күн",
+    countdownHours: "сағат",
+    countdownMinutes: "минут",
+    countdownSeconds: "секунд",
     calendarTitle: "Той салтанаты:",
     calendarDate: "24.01.2026 жыл",
     timelineDesc: "Тойдың басталуы",
@@ -57,10 +68,14 @@ const translations = {
     weddingDate: "24 январь 2026, соат 19:00",
     poem:
       "Oрқа ташлаб болалик йилларини,<br />Биз ҳам тикидик янги оила, янги отажой.<br />Ота-она йўлларига қадам ташладик,<br />Бугун ва келажакни бирлаштириш учун.",
-    address: "Ҳурматли қариндош-уруқ, дўстлар ва қўшнилар!",
+    address: "Ҳурматли қавм-қариндошлар, Азиз ака-укалар,  Тоға-жиянлар, Бўлалар, Қадрли қуда-андалар, Дўст-у дугоналар, Ҳамкасблар!",
     invitationMessage:
       "Сиз(лар)ни фарзандларимиз<br><span class=\"couple-inline-names great-vibes\">Жамшидбек &amp; Кахрабо</span><br> никоҳ тўйига таклиф этамиз ва бахтимизга шерик бўлишингизни истаймиз!",
     countdownTitle: "Тўйгача қолди:",
+    countdownDays: "кун",
+    countdownHours: "соат",
+    countdownMinutes: "дақиқа",
+    countdownSeconds: "сония",
     calendarTitle: "Тўй тантанаси:",
     calendarDate: "24.01.2026 йил",
     timelineDesc: "Тўй бошланиши",
@@ -105,7 +120,11 @@ const translations = {
     address: "Dear relatives, friends, and neighbors!",
     invitationMessage:
       "We invite you to be a valued guest at the wedding of our children, <br><span class=\"couple-inline-names great-vibes\">Jamshidbek &amp; Kahrabo</span><br> and share in our happiness!",
-      countdownTitle: "Until the wedding:",
+    countdownTitle: "Until the wedding:",
+    countdownDays: "days",
+    countdownHours: "hours",
+    countdownMinutes: "minutes",
+    countdownSeconds: "seconds",
     calendarTitle: "Wedding Ceremony:",
     calendarDate: "24.01.2026",
     timelineDesc: "Wedding begins",
@@ -187,6 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
     selector.value = defaultLang;
     selector.addEventListener('change', (e) => {
       setLanguage(e.target.value);
+      // When the language changes, restart scroll‑triggered animations.
+      if (typeof resetAnimations === 'function') {
+        resetAnimations();
+      }
     });
   }
 });

@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      The default language is Kazakh (kk) but can be changed via the language
+      selector. All textual content uses the `data-i18n` attribute so it can
+      be swapped out when a different language is chosen.
+    -->
     <title>Jamshidbek &amp; Kakhrabo – Үйлену тойға шақыру</title>
     <!-- Google Fonts for elegant typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,20 +55,20 @@
       </div>
     </header>
 
-    <!-- Hidden audio element; plays your chosen Miras Zhugunusov song -->
-    <!-- The audio file is stored locally in the audio folder; replace with your own if needed. -->
+    <!-- Hidden audio element; plays your chosen song.  The audio file is stored
+         locally in the audio folder; replace with your own if needed. -->
     <audio id="backgroundMusic" src="audio/song.mp3" loop></audio>
 
     <!-- Invitation message section -->
     <section class="section invite-section">
       <div class="invite-text">
         <!-- Poem lines in handwritten style -->
-        <p class="poem caveat animate-item" data-i18n="poem">
+        <!-- <p class="poem caveat animate-item" data-i18n="poem">
           Артқа тастап балауса бала шақты,<br />
           Біз де тіктік жас отау, жаңа ошақты.<br />
           Әке – шеше жолына қадам бастық,<br />
           Жалғау үшін бүгін мен болашақты.
-        </p>
+        </p> -->
         <!-- Address to relatives and friends -->
         <p class="address tiny5 animate-item" data-i18n="address">
           Құрметті ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат,
@@ -77,7 +82,6 @@
           <br />
           үйлену тойына жайылған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
         </p>
-
       </div>
 
       <!-- Countdown timer -->
@@ -86,24 +90,24 @@
         <div class="countdown" id="countdown">
           <div class="countdown-item">
             <span class="number" id="days">0</span>
-            <span class="label">күн</span>
+            <!-- Use data-i18n on the label so the unit names change with language -->
+            <span class="label" data-i18n="countdownDays">күн</span>
           </div>
           <div class="countdown-item">
             <span class="number" id="hours">0</span>
-            <span class="label">сағат</span>
+            <span class="label" data-i18n="countdownHours">сағат</span>
           </div>
           <div class="countdown-item">
             <span class="number" id="minutes">0</span>
-            <span class="label">минут</span>
+            <span class="label" data-i18n="countdownMinutes">минут</span>
           </div>
           <div class="countdown-item">
             <span class="number" id="seconds">0</span>
-            <span class="label">секунд</span>
+            <span class="label" data-i18n="countdownSeconds">секунд</span>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- Mini calendar section -->
     <section class="section calendar-section">
@@ -115,6 +119,7 @@
       <table class="calendar-table animate-item">
         <thead>
           <tr>
+            <!-- Day headings will be overwritten by translations.js -->
             <th>ПН</th>
             <th>ВТ</th>
             <th>СР</th>
@@ -187,54 +192,58 @@
       <h2 class="section-title animate-item" data-i18n="photosTitle">Біздің суреттер</h2>
       <div class="photos">
         <!-- Replace the placeholders with your own photos -->
-        <img
-          src="images/photo1.jpg"
-          alt="photo 1"
-          class="animate-item"
-        />
-        <img
-          src="images/photo2.jpg"
-          alt="photo 2"
-          class="animate-item"
-        />
-        <img
-          src="images/photo3.jpg"
-          alt="photo 3"
-          class="animate-item"
-        />
+        <img src="images/photo1.jpg" alt="photo 1" class="animate-item" />
+        <img src="images/photo2.jpg" alt="photo 2" class="animate-item" />
+        <img src="images/photo3.jpg" alt="photo 3" class="animate-item" />
       </div>
     </section>
 
-    <!-- Map and venue section -->
+        <!-- Map and venue section -->
     <section class="section map-section">
-      <h2 class="section-title animate-item" data-i18n="locationTitle">Мекен‑жайымыз</h2>
+      <h2 class="section-title animate-item" data-i18n="locationTitle">Мекен-жайымыз</h2>
       <p class="venue-address animate-item" data-i18n="venueAddress">
         Түркістан қаласы, Ескі Иқан ауылы, «Azizbek» тойханасы
       </p>
+
+      <!-- BOTH MAPS TOGETHER -->
       <div class="map-container animate-item">
-        <!--
-          Using a free Google Maps embed without an API key. The search query
-          can be adjusted to match the exact venue name and address. When
-          deploying, you may replace the query with a more precise location or
-          embed code.
-        -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d781.1221226762892!2d68.52246126964101!3d43.19659397587346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDExJzQ3LjciTiA2OMKwMzEnMjMuMiJF!5e1!3m2!1sen!2sus!4v1764220102346!5m2!1sen!2sus" 
-          width="100%" height="100%"  
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <!-- <iframe
-          width="100%"
-          height="100%"
-          frameborder="0"
-          style="border:0"
-          src="https://maps.google.com/maps?q=%D0%A2%D2%AF%D1%80%D0%BA%D1%96%D1%81%D1%82%D0%B0%D0%BD%20%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%20%D0%95%D1%81%D0%BA%D1%96%20%D0%98%D2%9B%D0%B0%D0%BD%20%D0%B0%D1%83%D1%8B%D0%BB%D1%8B%20Azizbek%20%D1%82%D0%BE%D0%B9%D1%85%D0%B0%D0%BD%D0%B0%D1%81%D1%8B&amp;output=embed"
-          allowfullscreen
-        ></iframe> -->
+        <!-- Google Maps -->
+        <div class="map-embed google-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d781.1221226762892!2d68.52246126964101!3d43.19659397587346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDExJzQ3LjciTiA2OMKwMzEnMjMuMiJF!5e1!3m2!1sen!2sus!4v1764220102346!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Yandex Maps -->
+        <div class="map-embed yandex-map">
+          <div style="position:relative;overflow:hidden;width:100%;height:100%;">
+            <a 
+              href="https://yandex.com/maps?utm_medium=mapframe&utm_source=maps" 
+              style="color:#eee;font-size:12px;position:absolute;top:0px;">
+                Yandex Maps</a>
+              <a 
+              href="https://yandex.com/maps/29417/turkestan-district/house/k_ismailov_koshesi_6a/YkEYcwVjSE0DQFppfX14d3pibQ==/?from=mapframe&l=sat&ll=68.523965%2C43.196807&source=mapframe&utm_medium=mapframe&utm_source=maps&z=19" 
+              style="color:#eee;font-size:12px;position:absolute;top:14px;">
+              Eski Iqan aýyly — Yandex Maps</a>
+            <iframe 
+              src="https://yandex.com/map-widget/v1/?from=mapframe&l=sat&ll=68.523965%2C43.196807&mode=whatshere&source=mapframe&utm_source=mapframe&whatshere%5Bpoint%5D=68.523187%2C43.196604&whatshere%5Bzoom%5D=17&z=19" 
+              width="100%"
+              height="100%"
+              frameborder="1" 
+              allowfullscreen="true" 
+              style="position:relative;">
+            </iframe>
+          </div>
+        </div>
       </div>
     </section>
+
 
     <!-- Host & dress code and form instructions section -->
     <section class="section details-section">
@@ -266,11 +275,15 @@
       <div class="rsvp">
         <h2 class="animate-item" data-i18n="rsvpTitle">Қатысу формасы</h2>
         <!-- RSVP instructions moved here -->
-        <p class="rsvp-instructions tiny5 animate-item" data-i18n="formInstructions">Төмендегі форманы толтырып тойға қатысуыңызды растауыңызды сұраймыз:</p>
+        <p class="rsvp-instructions tiny5 animate-item" data-i18n="formInstructions">
+          Төмендегі форманы толтырып тойға қатысуыңызды растауыңызды сұраймыз:
+        </p>
         <form id="rsvpForm" class="animate-item">
           <!-- Name field -->
           <div class="form-group">
-            <label for="name" data-i18n="nameLabel">Аты‑жөніңіз (Жұбыңызбен келсеңіз, есімдеріңізді бірге жазыңыз)</label>
+            <label for="name" data-i18n="nameLabel"
+              >Аты‑жөніңіз (Жұбыңызбен келсеңіз, есімдеріңізді бірге жазыңыз)</label
+            >
             <input type="text" id="name" name="name" required />
           </div>
 
@@ -279,13 +292,7 @@
             <label data-i18n="attendanceQuestion">Тойға келесіз бе?</label>
             <div class="radio-group">
               <label>
-                <input
-                  type="radio"
-                  name="attendance"
-                  value="Иә келемін"
-                  data-count="1"
-                  required
-                />
+                <input type="radio" name="attendance" value="Иә келемін" data-count="1" required />
                 <span data-i18n="attendYes">Иә келемін</span>
               </label>
               <label>
@@ -299,13 +306,7 @@
                 <span data-i18n="attendYesWithSpouse">Иә, жұбайыммен келемін</span>
               </label>
               <label>
-                <input
-                  type="radio"
-                  name="attendance"
-                  value="Жоқ, келе алмаймын"
-                  data-count="0"
-                  required
-                />
+                <input type="radio" name="attendance" value="Жоқ, келе алмаймын" data-count="0" required />
                 <span data-i18n="attendNo">Жоқ, келе алмаймын</span>
               </label>
             </div>
@@ -316,21 +317,22 @@
             <label for="guestCount" data-i18n="guestCountLabel">Қанша адам болып келесіз?</label>
             <div class="number-input">
               <button type="button" id="minus">−</button>
-              <input
-                type="text"
-                id="guestCount"
-                name="guestCount"
-                value="0"
-                readonly
-              />
+              <input type="text" id="guestCount" name="guestCount" value="0" readonly />
               <button type="button" id="plus">+</button>
             </div>
           </div>
 
           <!-- Message box -->
           <div class="form-group">
-            <label for="message" data-i18n="additionalMessageLabel">Қосымша хабарлама (қаласаңыз):</label>
-            <textarea id="message" name="message" data-i18n-placeholder="additionalMessagePlaceholder" placeholder="Хабарламаңызды жазуға болады..."></textarea>
+            <label for="message" data-i18n="additionalMessageLabel"
+              >Қосымша хабарлама (қаласаңыз):</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              data-i18n-placeholder="additionalMessagePlaceholder"
+              placeholder="Хабарламаңызды жазуға болады..."
+            ></textarea>
           </div>
 
           <!-- Submit button -->
@@ -343,6 +345,7 @@
       <p data-i18n="footerMessage">Қуанышымызға ортақ болуға асыға күтеміз!</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
     <!-- Translations script to enable multilingual support -->
     <script src="translations.js"></script>
