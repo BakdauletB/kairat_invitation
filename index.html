@@ -189,7 +189,7 @@
       <h2 class="section-title animate-item" data-i18n="photosTitle">Біздің суреттер</h2>
       <div class="photos">
         <img src="images/photo1.jpeg" alt="photo 1" class="animate-item" />
-        <img src="images/photo2.jpg" alt="photo 2" class="animate-item" />
+        <img src="images/photo2.jpeg" alt="photo 2" class="animate-item" />
         <img src="images/photo3.jpeg" alt="photo 3" class="animate-item" />
       </div>
     </section> 
@@ -227,6 +227,80 @@
       <!-- Message to guests -->
       <p class="join-message caveat animate-item" data-i18n="joinMessage">Қуанышымызға ортақ болыңыздар!</p>
     </section>
+    <!-- RSVP section -->
+    <section class="section rsvp-section">
+      <div class="rsvp">
+        <h2 class="animate-item" data-i18n="rsvpTitle">Қатысу формасы</h2>
+        <!-- RSVP instructions moved here -->
+        <p class="rsvp-instructions tiny5 animate-item" data-i18n="formInstructions">
+          Төмендегі форманы толтырып тойға қатысуыңызды растауыңызды сұраймыз:
+        </p>
+        <form id="rsvpForm" class="animate-item">
+          <!-- Name field -->
+          <div class="form-group">
+            <label for="name" data-i18n="nameLabel"
+              >Аты‑жөніңіз (Жұбыңызбен келсеңіз, есімдеріңізді бірге жазыңыз)</label
+            >
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <!-- Attendance radio options -->
+          <div class="form-group">
+            <label data-i18n="attendanceQuestion">Тойға келесіз бе?</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="attendance" value="Иә келемін" data-count="1" required />
+                <span data-i18n="attendYes">Иә келемін</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="attendance"
+                  value="Иә, жұбайыммен келемін"
+                  data-count="2"
+                  required
+                />
+                <span data-i18n="attendYesWithSpouse">Иә, жұбайыммен келемін</span>
+              </label>
+              <label>
+                <input type="radio" name="attendance" value="Жоқ, келе алмаймын" data-count="0" required />
+                <span data-i18n="attendNo">Жоқ, келе алмаймын</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Guest count with plus/minus -->
+          <div class="form-group">
+            <label for="guestCount" data-i18n="guestCountLabel">Қанша адам болып келесіз?</label>
+            <div class="number-input">
+              <button type="button" id="minus">−</button>
+              <input type="text" id="guestCount" name="guestCount" value="0" readonly />
+              <button type="button" id="plus">+</button>
+            </div>
+          </div>
+
+          <!-- Message box -->
+          <div class="form-group">
+            <label for="message" data-i18n="additionalMessageLabel"
+              >Қосымша хабарлама (қаласаңыз):</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              data-i18n-placeholder="additionalMessagePlaceholder"
+              placeholder="Хабарламаңызды жазуға болады..."
+            ></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="submit" data-i18n="submitButton">Жіберу</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <p data-i18n="footerMessage">Қуанышымызға ортақ болуға асыға күтеміз!</p>
+    </footer>
     
 
     <!-- Scripts -->

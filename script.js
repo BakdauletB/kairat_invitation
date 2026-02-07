@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (diff < 0) {
       diff = 0;
     }
-    const days = Math.floor(diff / (1000 * 60 * 60 *28));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 28);
+    const days = Math.floor(diff / (1000 * 60 * 60 *24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
     daysSpan.textContent = days;
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       // Replace with your Google Apps Script web app URL
       const scriptURL =
-        'https://script.google.com/macros/s/AKfycbx1DH2nx1bWkCmudodIRvbELB7lfeC1Jpm5UVN0eBgqjKEVXCLKxyKsQZsJOGrOZn7F/exec';
+        'https://script.google.com/macros/s/AKfycbySZkmHbT8PhbHo_DY7hXW3FEC4Ju3oURMEG9RnB-MZdiqqpgTmf8ZxSDbeiBIjMvfLJg/exec';
       // Send the data to Google Apps Script endpoint
       fetch(scriptURL, {
         method: 'POST',
