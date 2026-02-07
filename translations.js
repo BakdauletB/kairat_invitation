@@ -21,7 +21,7 @@ const translations = {
     address:
       "Құрметті ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат, дос-жарандар, көршілер мен әріптестер!",
     invitationMessage:
-      'Сіз(дер)ді асқар тау әкеміз<br><span class="couple-inline-names great-vibes">Қайраттың</span><br>50 жас мерейтойы және анамыз Асмираммен отау құрғандарына 25 жыл толған Алтын тойына арналған салтанатты дастарханымыздың қонағы болуға шақырамыз!',
+      'Сіз(дер)ді асқар тау әкеміз<br><span class="couple-inline-names great-vibes"> Қайрат </span><br> 50 жас мерейтойы және анамыз Асмираммен отау құрғандарына 25 жыл толған Алтын тойына арналған салтанатты дастарханымыздың қонағы болуға шақырамыз!',
     countdownTitle: "Тойға дейін:",
     // Unit labels for the countdown timer
     countdownDays: "күн",
@@ -126,7 +126,7 @@ const translations = {
     countdownMinutes: "minutes",
     countdownSeconds: "seconds",
     calendarTitle: "Wedding Ceremony:",
-    calendarDate: "24.01.2026",
+    calendarDate: "28.03.2026",
     timelineDesc: "Wedding begins",
     photosTitle: "Our photos",
     locationTitle: "Our address",
