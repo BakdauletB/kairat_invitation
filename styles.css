@@ -18,37 +18,39 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
   line-height: 1.6;
-  /* Subtle texture background using a pastel watercolour gradient */
   background-image: url('images/pastel-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Font helper classes */
+
 .caveat {
   font-family: 'Caveat', cursive;
 }
+
 .lobster {
   font-family: 'Lobster', sans-serif;
 }
+
 .pacifico {
   font-family: 'Pacifico', cursive;
 }
+
 .tiny5 {
   font-family: 'Tiny5', sans-serif;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
-/* Great Vibes font for couple names and special headings */
 .great-vibes {
   font-family: 'Great Vibes', cursive;
 }
+
 
 /* Hero section */
 .hero {
