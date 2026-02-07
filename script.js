@@ -66,7 +66,7 @@ function resetAnimations() {
 
 document.addEventListener('DOMContentLoaded', () => {
   /* Countdown timer */
-  const weddingDate = new Date('2026-01-24T19:00:00+05:00');
+  const weddingDate = new Date('2026-03-28T19:00:00+05:00');
   const daysSpan = document.getElementById('days');
   const hoursSpan = document.getElementById('hours');
   const minutesSpan = document.getElementById('minutes');
