@@ -35,7 +35,7 @@ To save form submissions into a Google Sheet you can use a simple Google Apps�
    function doPost(e) {
      // Parse the JSON request body
      var data = JSON.parse(e.postData.contents);
-     var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
+     var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('baha');
      // Append a new row with the current timestamp and the form data
      sheet.appendRow([
        new Date(),
