@@ -13,15 +13,15 @@
 
 const translations = {
   kk: {
-    invitationTitle: "Үйлену тойға шақыру",
-    coupleNames: "Жамшидбек <br /> &amp; <br />Кахрабо",
-    weddingDate: "24 қаңтар 2026, сағат 19:00",
+    invitationTitle: "Мерейтойға шақыру",
+    coupleNames: "Қайрат ",
+    weddingDate: "28 наурыз 2026, сағат 19:00",
     poem:
       "Артқа тастап балауса бала шақты,<br />Біз де тіктік жас отау, жаңа ошақты.<br />Әке – шеше жолына қадам бастық,<br />Жалғау үшін бүгін мен болашақты.",
     address:
       "Құрметті ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат, дос-жарандар, көршілер мен әріптестер!",
     invitationMessage:
-      'Сіз(дер)ді балаларымыз<br><span class="couple-inline-names great-vibes">Жамшидбек &amp; Кахрабо</span><br>үйлену тойына жайылған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!',
+      'Сіз(дер)ді асқар тау әкеміз<br><span class="couple-inline-names great-vibes">Қайраттың</span><br>50 жас мерейтойы және анамыз Асмираммен отау құрғандарына 25 жыл толған Алтын тойына арналған салтанатты дастарханымыздың қонағы болуға шақырамыз!',
     countdownTitle: "Тойға дейін:",
     // Unit labels for the countdown timer
     countdownDays: "күн",
@@ -29,13 +29,13 @@ const translations = {
     countdownMinutes: "минут",
     countdownSeconds: "секунд",
     calendarTitle: "Той салтанаты:",
-    calendarDate: "24.01.2026 жыл",
+    calendarDate: "28.03.2026 жыл",
     timelineDesc: "Тойдың басталуы",
     photosTitle: "Біздің суреттер",
     locationTitle: "Мекен‑жайымыз",
-    venueAddress: "Түркістан қаласы, Ескі Иқан ауылы, «Азизбек» тойханасы",
+    venueAddress: "Темірлан елді мекені, “Аруна” тойханасы",
     hostTitle: "Той иесі",
-    hostName: "Атаевтар әулеті",
+    hostName: "Қайрат - Асмира",
     dressTitle: "Дресс‑код:",
     dressMen: "Ер адамдар: классикалық костюм",
     dressWomen: "Әйел адамдар: кешкі көйлек",
