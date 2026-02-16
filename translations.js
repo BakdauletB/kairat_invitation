@@ -15,7 +15,7 @@ const translations = {
   kk: {
     invitationTitle: "Мерейтойға шақыру",
     coupleNames: "Қайрат ",
-    weddingDate: "28 наурыз 2026, сағат 19:00",
+    weddingDate: "29 наурыз 2026, сағат 19:00",
     poem:
       "Артқа тастап балауса бала шақты,<br />Біз де тіктік жас отау, жаңа ошақты.<br />Әке – шеше жолына қадам бастық,<br />Жалғау үшін бүгін мен болашақты.",
     address:
@@ -126,7 +126,7 @@ const translations = {
     countdownMinutes: "minutes",
     countdownSeconds: "seconds",
     calendarTitle: "Wedding Ceremony:",
-    calendarDate: "28.03.2026",
+    calendarDate: "29.03.2026",
     timelineDesc: "Wedding begins",
     photosTitle: "Our photos",
     locationTitle: "Our address",
