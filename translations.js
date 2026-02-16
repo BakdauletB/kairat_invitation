@@ -29,7 +29,7 @@ const translations = {
     countdownMinutes: "минут",
     countdownSeconds: "секунд",
     calendarTitle: "Той салтанаты:",
-    calendarDate: "28.03.2026 жыл",
+    calendarDate: "29.03.2026 жыл",
     timelineDesc: "Тойдың басталуы",
     photosTitle: "Біздің суреттер",
     locationTitle: "Мекен‑жайымыз",
